@@ -9,11 +9,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path="/search">
-            <SearchPage />
+          <Route exact path="/search" element={<SearchPage />}>
           </Route>
-          <Route path="/">
-            <Home />
+          <Route exact path="/" element={<Home />}>
           </Route>
         </Switch>
       </BrowserRouter>
