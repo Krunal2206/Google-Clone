@@ -5,11 +5,13 @@ import { StateContext } from './StateProvider';
 import './SearchPage.css';
 import useGoogleSearch from './useGoogleSearch';
 import { SearchOutlined, DescriptionOutlined, ImageOutlined, LocalOfferOutlined, MoreVertOutlined, RoomOutlined } from '@material-ui/icons';
+import useDebounce from './useDebounce';
 
 function SearchPage() {
 
     const { input } = useContext(StateContext);
-    const { data } = useGoogleSearch(input);
+    const debouncedSearchTerm = useDebounce(input, 1000);
+    const { data } = useGoogleSearch(debouncedSearchTerm);
 
     return (
         <div className="searchPage">
