@@ -3,7 +3,8 @@ import './Home.css';
 import { Avatar, IconButton } from '@material-ui/core';
 import { Apps } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
-import Search from './Search';
+import Search from './Search'
+import Footer from './Footer'
 
 function Home() {
     return (
@@ -22,6 +23,7 @@ function Home() {
                     <Search />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

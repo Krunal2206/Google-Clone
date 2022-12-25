@@ -2,7 +2,7 @@ import { React, useContext } from 'react';
 import { useHistory } from 'react-router';
 import './Search.css';
 import { Button } from '@material-ui/core';
-import { Mic, SearchOutlined } from '@material-ui/icons';
+import { Mic, SearchOutlined, CameraAltOutlined } from '@material-ui/icons';
 import { StateContext } from './StateProvider';
 
 function Search({ hideButtons = false }) {
@@ -21,6 +21,7 @@ function Search({ hideButtons = false }) {
                 <SearchOutlined />
                 <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
                 <Mic />
+                <CameraAltOutlined style={{ marginLeft: "15px" }} />
             </div>
 
             {!hideButtons ?

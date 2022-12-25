@@ -1,0 +1,41 @@
+.searchPage_footer {
+  background-color: gainsboro;
+  color: gray;
+  border-top: 1px solid lightgrey;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: gainsboro;
+  border-top: 1px solid lightgrey;
+  width: 100%;
+  color: gray;
+}
+.searchPage_footer p {
+  padding: 12px 30px;
+}
+.footer p {
+  padding: 12px 30px;
+}
+.footer_left {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 30px;
+}
+.searchPage_footer a {
+  text-decoration: none;
+  color: #70757a;
+  margin-right: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: #70757a;
+  margin-right: 20px;
+}
+.searchPage_footer a:hover {
+  text-decoration: underline;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
