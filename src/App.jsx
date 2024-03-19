@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, } from 'react-router-dom'
-import Home from './Home'
-import Results from './Results'
+import Home from './components/Home'
+import SearchResult from './components/SearchResult'
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Results />} />
+          <Route path="/:query/:startIndex" element={<SearchResult />} />
         </Routes>
       </BrowserRouter>
     </>
