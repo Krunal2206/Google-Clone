@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { pagination } from "../utils/Constants";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Pagination = ({ queries }) => {
 
-    const { query } = useParams();
-    const [page, setPage] = useState(pagination[0].startIndex);
+    const { query, startIndex } = useParams();
+    const [page, setPage] = useState(startIndex);
     const navigate = useNavigate();
 
     const paginationClickHandler = (startIndex) => {
@@ -15,8 +14,8 @@ const Pagination = ({ queries }) => {
     };
 
     useEffect(() => {
-        setPage(pagination[0].startIndex);
-    }, [query]);
+        setPage(startIndex);
+    }, [query, startIndex]);
 
     return (
         <div className="flex flex-col items-center py-14 max-w-[700px]">
